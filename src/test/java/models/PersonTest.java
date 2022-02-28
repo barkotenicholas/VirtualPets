@@ -27,4 +27,13 @@ class PersonTest {
         Person testPerson = new Person("Nicholas","barkotenicholas@gmail.com");
         assertEquals("barkotenicholas@gmail.com",testPerson.getEmail());
     }
+
+    @Test
+    @DisplayName("Eqauls returns true if Person objects are same")
+    public void equals_returnsTrueIfNameAndEmailSReSame_true(){
+        Person firstPerson = new Person("Nicholas","barkotenicholas@gmail.com");
+        Person secondPerson = new Person("Nicholas","barkotenicholas@gmail.com");
+
+        assertTrue(firstPerson.equals(secondPerson));
+    }
 }
